@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv"
+        android:text="Odaberite valutu"
+        android:textSize="22sp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="casual"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical|center_horizontal" />
+
+    <RadioGroup
+        android:id="@+id/rGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/tv"
+        android:layout_marginTop="10dp">
+        <RadioButton
+            android:id="@+id/rHRK"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="HRK"
+            android:checked="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"/>
+        <RadioButton
+            android:id="@+id/rBAM"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="BAM"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp" />
+        <RadioButton
+            android:id="@+id/rEUR"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="EUR"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp" />
+        <RadioButton
+            android:id="@+id/rGBP"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="GBP"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp" />
+
+        <RadioButton
+            android:id="@+id/rYEN"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="YEN"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp" />
+
+        <RadioButton
+            android:id="@+id/rCHF"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="CHF"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp" />
+        <RadioButton
+            android:id="@+id/rUSD"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="USD"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp" />
+        <RadioButton
+            android:id="@+id/rSEK"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="SEK"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp" />
+    </RadioGroup>
+
+    <Button
+        android:text="Spremi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rGroup"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/bSave"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp" />
+
+    <Button
+        android:text="Odbaci"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bCancel"
+        android:layout_below="@+id/bSave"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp" />
+
+</RelativeLayout>

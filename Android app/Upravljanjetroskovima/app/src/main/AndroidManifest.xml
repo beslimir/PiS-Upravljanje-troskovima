@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="beslimir.upravljanjetroskovima">
+
+    <application android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".InsertAccount"
+            android:label="Računi"/>
+        <activity android:name=".InsertCharge"
+            android:label="Transakcije"/>
+        <activity android:name=".AccountOverview"
+            android:label="Pregled računa"/>
+        <activity android:name=".Overview"
+            android:label="Ukupan pregled"/>
+        <activity android:name=".OverviewPerDay"
+            android:label="Dnevni pregled"/>
+        <activity android:name=".OverviewPerMonth"
+            android:label="Mjesečni pregled"/>
+        <activity android:name=".Info"
+            android:label="Info"/>
+        <activity android:name=".ChargeOverview"
+            android:label="Pregled transakcija"/>
+        <activity android:name=".ChargeUpdate"
+            android:label="Izmjena transakcija"/>
+        <activity android:name=".AccountUpdate"
+            android:label="Izmjena računa"/>
+        <activity android:name=".Category"
+            android:label="Pregled kategorija"/>
+        <activity android:name=".CategoryInsert"
+            android:label="Kategorije"/>
+        <activity android:name=".CategoryUpdate"
+            android:label="Izmjena kategorija"/>
+        <activity android:name=".Currency"
+            android:label="Valute"/>
+    </application>
+
+</manifest>

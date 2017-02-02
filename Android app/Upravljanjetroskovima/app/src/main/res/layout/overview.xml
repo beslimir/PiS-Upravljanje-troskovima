@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawerLayout"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Sijecanj"
+            android:id="@+id/currentMonth"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:fontFamily="casual" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="81.00"
+                android:id="@+id/totalPrice"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:textSize="60dp"
+                android:layout_weight="1"
+                android:paddingTop="5dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textStyle="normal|bold"
+                android:gravity="right" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text=" €"
+                android:id="@+id/tvCurrency"
+                android:layout_marginTop="28dp"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:paddingTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textStyle="normal|bold" />
+        </LinearLayout>
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lvMonth" />
+
+    </LinearLayout>
+    <!-- NavigationDrawer -->
+    <RelativeLayout
+        android:id="@+id/drawer_pane"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:background="#C0C3C4"
+        android:layout_gravity="start" >
+
+        <!-- Navigation Listview -->
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#CFD3D4"
+            android:layout_gravity="left|start">
+        </ListView>
+    </RelativeLayout>
+</android.support.v4.widget.DrawerLayout>

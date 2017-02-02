@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="Category name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvChargeCategoryName"
+        android:textSize="20sp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="normal|bold"
+        android:fontFamily="sans-serif-smallcaps" />
+
+    <TextView
+        android:text="21.01.2017."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvChargeDate"
+        android:layout_below="@+id/tvChargeCategoryName"
+        android:layout_alignLeft="@+id/tvChargeCategoryName"
+        android:layout_alignStart="@+id/tvChargeCategoryName"
+        android:layout_marginBottom="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/tvChargeId"
+        android:visibility="gone" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvChargeValue"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/tvChargeCategoryId"
+        android:visibility="gone" />
+
+    <TextView
+        android:text="10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvChargeValue"
+        android:textSize="22sp"
+        android:textColor="@android:color/holo_green_light"
+        android:layout_alignBaseline="@+id/tvChargeDate"
+        android:layout_alignBottom="@+id/tvChargeDate"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp" />
+
+</RelativeLayout>

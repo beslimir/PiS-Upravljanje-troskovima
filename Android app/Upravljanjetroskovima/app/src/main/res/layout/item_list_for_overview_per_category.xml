@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="PET"
+        android:id="@+id/dayC"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="20.01.2016."
+        android:id="@+id/dateC"
+        android:textSize="18dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/dayC"
+        android:layout_toEndOf="@+id/dayC"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Čips &amp; smoki"
+        android:id="@+id/noteC"
+        android:textSize="18dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/dateC"
+        android:layout_toEndOf="@+id/dateC"
+        android:layout_marginLeft="15dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="12.00"
+        android:id="@+id/priceC"
+        android:textSize="18dp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/currencyC"
+        android:layout_toStartOf="@+id/currencyC"
+        android:layout_marginRight="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="€"
+        android:id="@+id/currencyC"
+        android:textSize="18dp"
+        android:gravity="right"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>
