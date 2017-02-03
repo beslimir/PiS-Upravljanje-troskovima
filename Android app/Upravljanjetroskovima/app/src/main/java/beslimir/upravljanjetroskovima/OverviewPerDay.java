@@ -187,13 +187,18 @@ public class OverviewPerDay extends AppCompatActivity {
     public void getTotalCharge(){
         Cursor getTotalChargeNow = monthDB.getTotalChargeD(myDate);
         Cursor getTotalChargeMinusNow = monthDB.getTotalChargeMinusD(myDate);
+        getTotalChargeNow.moveToFirst();
         getTotalChargeMinusNow.moveToFirst();
-        if(getTotalChargeNow.getCount() == 0){
-            totalPrice.setText("0");
+        Log.i("totalCharge", getTotalChargeNow.getInt(0) + " " + getTotalChargeMinusNow.getInt(0));
+        if(getTotalChargeNow.getInt(0) == 0 && getTotalChargeMinusNow.getInt(0) == 0){
+            totalPrice.setText("" + 0);
             Log.i("charge", "No charge");
+        }else if(getTotalChargeNow.getInt(0) != 0 && getTotalChargeMinusNow.getInt(0) == 0){
+            totalPrice.setText("" + getTotalChargeNow.getInt(0));
+        }else if(getTotalChargeNow.getInt(0) == 0 && getTotalChargeMinusNow.getInt(0) != 0){
+            totalPrice.setText("" + getTotalChargeMinusNow.getInt(0));
         }else{
-            getTotalChargeNow.moveToNext();
-            totalPrice.setText("" + (Double.parseDouble(getTotalChargeNow.getString(0)) - Double.parseDouble(getTotalChargeMinusNow.getString(0))));
+            totalPrice.setText("" + (getTotalChargeNow.getInt(0) - getTotalChargeMinusNow.getInt(0)));
         }
     }
 
@@ -236,6 +241,5 @@ public class OverviewPerDay extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         finish();
-        startActivity(new Intent(OverviewPerDay.this, MainActivity.class));
     }
 }

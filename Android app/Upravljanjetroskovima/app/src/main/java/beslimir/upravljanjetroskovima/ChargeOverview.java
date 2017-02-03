@@ -325,6 +325,5 @@ public class ChargeOverview extends AppCompatActivity implements AdapterView.OnI
     public void onBackPressed() {
         super.onBackPressed();
         finish();
-        startActivity(new Intent(ChargeOverview.this, MainActivity.class));
     }
 }

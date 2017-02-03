@@ -236,6 +236,5 @@ public class OverviewPerMonth extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         finish();
-        startActivity(new Intent(OverviewPerMonth.this, MainActivity.class));
     }
 }

@@ -175,6 +175,5 @@ public class Category extends AppCompatActivity implements AdapterView.OnItemLon
     public void onBackPressed() {
         super.onBackPressed();
         finish();
-        startActivity(new Intent(Category.this, MainActivity.class));
     }
 }

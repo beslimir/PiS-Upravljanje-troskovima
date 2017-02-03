@@ -102,14 +102,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Log.i("charge", "No charge");
         }else{
             getChargeEntriesNow.moveToFirst();
-            Toast.makeText(MainActivity.this,
+            /*Toast.makeText(MainActivity.this,
                     getChargeEntriesNow.getInt(getChargeEntriesNow.getColumnIndex("charge_id")) + " " +
                     getChargeEntriesNow.getString(getChargeEntriesNow.getColumnIndex("charge_price")) + " " +
                     getChargeEntriesNow.getString(getChargeEntriesNow.getColumnIndex("charge_date")) + " " +
                     getChargeEntriesNow.getInt(getChargeEntriesNow.getColumnIndex("charge_account_id")) + " " +
                     getChargeEntriesNow.getInt(getChargeEntriesNow.getColumnIndex("charge_category_id")) + " " +
                     getChargeEntriesNow.getInt(getChargeEntriesNow.getColumnIndex("charge_type")),
-                    Toast.LENGTH_SHORT).show();
+                    Toast.LENGTH_SHORT).show();*/
         }
 
         //NavDrawer

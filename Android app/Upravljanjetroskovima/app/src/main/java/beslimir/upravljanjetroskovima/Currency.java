@@ -1,10 +1,12 @@
 package beslimir.upravljanjetroskovima;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -27,6 +29,7 @@ public class Currency extends AppCompatActivity {
         setContentView(R.layout.currency);
 
         currDB = new DBHelper(this);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         radioGroup = (RadioGroup) findViewById(R.id.rGroup);
         radioButton = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
@@ -50,6 +53,19 @@ public class Currency extends AppCompatActivity {
         insertCurrency();
 
         getSavedState();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                Intent i = new Intent(Currency.this, MainActivity.class);
+                // set the new task and clear flags
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(i);
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     public void insertCurrency(){
@@ -118,5 +134,11 @@ public class Currency extends AppCompatActivity {
         }else{
             Log.i("curr updated", "curr updated");
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }

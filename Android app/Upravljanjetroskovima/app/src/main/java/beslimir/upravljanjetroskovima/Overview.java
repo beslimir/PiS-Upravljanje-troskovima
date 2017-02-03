@@ -226,6 +226,5 @@ public class Overview extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         finish();
-        startActivity(new Intent(Overview.this, MainActivity.class));
     }
 }

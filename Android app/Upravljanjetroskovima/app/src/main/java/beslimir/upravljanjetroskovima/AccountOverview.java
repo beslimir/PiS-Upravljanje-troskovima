@@ -253,6 +253,5 @@ public class AccountOverview extends AppCompatActivity implements AdapterView.On
     public void onBackPressed() {
         super.onBackPressed();
         finish();
-        startActivity(new Intent(AccountOverview.this, MainActivity.class));
     }
 }
